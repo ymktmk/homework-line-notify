@@ -11,7 +11,7 @@ def hello(event, context):
         'Authorization': 'Bearer ' + os.environ['ACCESS_TOKEN']
     }
 
-    payload = {
+    data = {
         'messages': [
             {
                 'type': 'text',
@@ -20,7 +20,7 @@ def hello(event, context):
         ]
     }
 
-    req = urllib.request.Request(url=url, payload=json.dumps(payload).encode('utf-8'), method='POST', headers=headers)
+    req = urllib.request.Request(url=url, data=json.dumps(data).encode('utf-8'), method='POST', headers=headers)
         
     with urllib.request.urlopen(req) as res:
 

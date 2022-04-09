@@ -32,4 +32,4 @@ functions:
     events:
       - schedule: cron(0 3 * * ? *)
     environment:
-      ACCESS_TOKEN: ${ACCESS_TOKEN}
+      ACCESS_TOKEN: ${env:ACCESS_TOKEN}
