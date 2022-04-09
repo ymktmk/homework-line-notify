@@ -2,7 +2,6 @@ import os
 import urllib.request
 import json
 
-
 def hello(event, context):
 
     url = 'https://api.line.me/v2/bot/message/broadcast'
